@@ -448,28 +448,37 @@ b, strong {
   background: #5b5b5b;
 }
 
-.contact-form {
-  position: relative;
-}
-
 .contact-info {
-  /* Start Quyen's part */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Căn giữa theo chiều dọc */
+  align-items: center; /* Căn giữa theo chiều ngang */
+  text-align: center; /* Căn giữa nội dung văn bản */
   background: #ffc200;
-  /* End Quyen's part */
   border-radius: 0 0 3px 3px;
   position: relative;
   bottom: 8px;
-  /* Start Quyen's part */
   height: 200px;
-  /* End Quyen's part */
-  max-width: 100%;  /* Giới hạn chiều rộng */
-  overflow: hidden; /* Ngăn nội dung tràn ra ngoài */
-  word-wrap: break-word; /* Xuống dòng khi cần */
-  overflow-wrap: break-word; /* Đảm bảo xuống dòng trên mọi trình duyệt */
+  max-width: 100%;
+  overflow: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
-.contact-info p, .contact-info a {
+.contact-info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Căn giữa nội dung bên trong */
+  width: 100%; /* Đảm bảo phần tử con không bị lệch */
+}
+
+.contact-info p, .contact-info a{
   color: #f7f3f3;
   font-size: 1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 90%; /* Giới hạn chiều rộng nội dung */
+}
+.contact-info h3{
   word-wrap: break-word;
   overflow-wrap: break-word;
   max-width: 90%; /* Giới hạn chiều rộng nội dung */
