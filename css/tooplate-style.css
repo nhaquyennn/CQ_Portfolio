@@ -549,11 +549,12 @@ b, strong {
   }
 }
 @media (max-width: 580px) {
-	.animated-info {
-		min-width: 200px;
-	}
+  .animated-info {
+    min-width: 200px;
+  }
+
   .animated-item {
-    font-size: 30px;
+    font-size: 24px; /* Thu nhỏ để tránh tràn */
   }
 
   .custom-btn-group {
@@ -573,26 +574,40 @@ b, strong {
     display: block;
     margin: 10px 0 0 0;
   }
+
   .contact {
-    padding: 3rem 0;
+    padding: 2rem 0;
   }
 
   .contact-info {
     padding: 1rem;
+    text-align: center; /* Căn giữa nội dung */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-info h3 {
+    font-size: 1.1rem; /* Giảm kích thước chữ để phù hợp */
+    max-width: 90%; /* Đảm bảo nội dung không tràn */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal; /* Cho phép xuống dòng khi cần */
+    line-height: 1.3;
+    text-align: center;
   }
 
   .contact-info p, .contact-info a {
-    font-size: 0.9rem; /* Thu nhỏ chữ trên màn hình nhỏ */
-  }
-
-  .contact-info-item h3 {
-    font-size: 1.3rem;
+    font-size: 0.9rem;
+    max-width: 90%;
   }
 
   .social-links {
     flex-wrap: wrap;
   }
 }
+
 @media (max-width: 320px) {
   .animated-text {
     margin-top: 0;
