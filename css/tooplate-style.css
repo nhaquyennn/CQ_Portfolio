@@ -448,25 +448,32 @@ b, strong {
   background: #5b5b5b;
 }
 
+/* General Contact Form Styling */
 .contact-form {
   position: relative;
 }
 
+/* Contact Info Box */
 .contact-info {
-  /* Start Quyen's part */
   background: #ffc200;
-  /* End Quyen's part */
   border-radius: 0 0 3px 3px;
   position: relative;
   bottom: 8px;
-  /* Start Quyen's part */
-  height: 200px;
-  /* End Quyen's part */
-}
-.contact-info p, .contact-info a {
-  color: #f7f3f3;
+  min-height: 200px; /* Đảm bảo chiều cao tối thiểu thay vì height cố định */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  text-align: center;
 }
 
+.contact-info p, .contact-info a {
+  color: #f7f3f3;
+  word-wrap: break-word;
+}
+
+/* Social Links */
 .social-links .uil {
   color: #f7f3f3;
   font-size: 20px;
@@ -477,12 +484,14 @@ b, strong {
   color: black;
 }
 
+/* Responsive Design */
 @media (min-width: 1270px) {
   .owl-theme .owl-dots {
     position: relative;
     bottom: 50px;
   }
 }
+
 @media (max-width: 991px) {
   .full-screen {
     padding-bottom: 4rem;
@@ -506,6 +515,7 @@ b, strong {
     padding: 2rem;
   }
 }
+
 @media (max-width: 767px) {
   h1 {
     font-size: 2.4em;
@@ -528,6 +538,7 @@ b, strong {
   .navbar-expand-sm .navbar-nav .nav-link {
     padding: 3px 20px;
   }
+
   .contact {
     padding: 4rem 0;
   }
@@ -540,10 +551,12 @@ b, strong {
     font-size: 1.5rem;
   }
 }
+
 @media (max-width: 580px) {
-	.animated-info {
-		min-width: 200px;
-	}
+  .animated-info {
+    min-width: 200px;
+  }
+
   .animated-item {
     font-size: 30px;
   }
@@ -565,6 +578,7 @@ b, strong {
     display: block;
     margin: 10px 0 0 0;
   }
+
   .contact {
     padding: 3rem 0;
   }
@@ -583,6 +597,7 @@ b, strong {
     flex-wrap: wrap;
   }
 }
+
 @media (max-width: 320px) {
   .animated-text {
     margin-top: 0;
